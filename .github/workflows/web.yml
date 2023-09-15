@@ -41,6 +41,12 @@ jobs:
         with:
           path: 'dist'
 
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with: 
+          branch: gh-pages
+          folder: dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
